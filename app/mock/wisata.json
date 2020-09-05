@@ -1,0 +1,125 @@
+{
+    "data": [
+      {
+        "id_wisata": 1,
+        "nama_wisata": "Air Terjun Segenter",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sint blanditiis cum asperiores cupiditate omnis, praesentium veritatis magnam distinctio earum nam quod maxime corporis dolore ipsam laborum sequi saepe accusamus.",
+        "gambar_wisata" : "https://i.ibb.co/pWm832K/airterjunsegenter1.jpg",
+        "location" : {
+            "lat" : -8.4990,
+            "lng" : 116.2935
+        }
+      },
+      {
+        "id_wisata": 2,
+        "nama_wisata": "Pelawangan Batu Kembar",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quisquam provident, dolorum ea, exercitationem omnis repellendus accusamus ratione sunt repudiandae qui ex pariatur architecto, officia ab animi! Quisquam, numquam sunt.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.4831,
+            "lng" : 116.2938
+        }
+      },
+      {
+        "id_wisata": 3,
+        "nama_wisata": "Air Terjun Selendang Rinjani 2",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio minus quidem expedita laboriosam asperiores alias et explicabo, accusantium necessitatibus esse accusamus, odio veritatis. Nam ut praesentium illo veniam esse recusandae.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.5030,
+            "lng" : 116.3276
+        }
+      },
+      {
+        "id_wisata": 4,
+        "nama_wisata": "Pendakian Alternatif Rinjani dan Camping Ground Karang Sidemen",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit maxime exercitationem sequi nulla consequatur, ex ea fuga saepe autem rerum id magnam officia odit. Sapiente ad accusamus numquam veritatis possimus.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.4831,
+            "lng" : 116.3307
+        }
+      },
+      {
+        "id_wisata": 5,
+        "nama_wisata": "Mata Air Monte",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ea earum unde ut, deserunt nulla voluptas corrupti tempora, et velit nostrum suscipit odio? Deleniti excepturi laudantium exercitationem quibusdam sequi iste!",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.4776,
+            "lng" : 116.3350 
+        }
+      },
+      {
+        "id_wisata": 6,
+        "nama_wisata": "Air Terjun Batu Hati",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus consequatur ipsa nesciunt saepe illo odit ea eligendi beatae suscipit pariatur fugiat eos dolor fugit incidunt libero molestias iste, adipisci eius.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.4715,
+            "lng" : 116.3400 
+        }
+      },
+      {
+        "id_wisata": 7,
+        "nama_wisata": "Outbound Rumah Pohon",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, animi ducimus minima aliquam sit, deserunt quisquam, dicta eius facere reiciendis mollitia illum? Dolore numquam nostrum possimus perspiciatis aliquid, eos deleniti.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.5198 ,
+            "lng" : 116.2841 
+        }
+      },
+      {
+        "id_wisata": 8,
+        "nama_wisata": "Penangkaran Burung",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur recusandae ab quidem quas! Asperiores, laudantium in tenetur fugit rerum consequatur optio aspernatur eligendi, odio vero quia quaerat qui soluta quibusdam!",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.5202 ,
+            "lng" : 116.2831 
+        }
+      },
+      {
+        "id_wisata": 9,
+        "nama_wisata": "Penangkaran Rusa",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem maiores, tenetur magnam id, quod ad sint deserunt officia possimus molestias quia saepe consequatur sed quam aliquid, rem harum quos repudiandae?",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.5198 ,
+            "lng" : 116.2840 
+        }
+      },
+      {
+        "id_wisata": 10,
+        "nama_wisata": "Camping Ground Kumbi",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ullam rerum cumque molestias qui optio officia iste ducimus temporibus eaque unde nulla sapiente officiis impedit vel dolorum quis, numquam earum!",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.5198 ,
+            "lng" : 116.2836 
+        }
+      },
+      {
+        "id_wisata": 11,
+        "nama_wisata": "Goa Pengkoak",
+        "alamat_wisata": "Dusun Kumbi",
+        "deskripsi_wisata" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis deleniti expedita vitae dolore atque quia, sequi fugiat voluptatem veritatis et esse quaerat odio ea vero blanditiis voluptate explicabo velit voluptates.",
+        "gambar_wisata" : "",
+        "location" : {
+            "lat" :-8.4893 ,
+            "lng" : 116.2940 
+        }
+      }
+    ]
+  }

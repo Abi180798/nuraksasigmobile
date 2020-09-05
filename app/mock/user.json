@@ -1,0 +1,24 @@
+{
+  "data":[
+    {
+      "id_user":1,
+      "username": "admin",
+      "password": "123",
+      "nama_lengkap": "Admin",
+      "alamat":"Dusun Kumbi",
+      "no_hp":"087755906130",
+      "role":"admin",
+      "token":"admin"
+    },
+    {
+      "id_user":2,
+      "username": "superadmin",
+      "password": "123",
+      "nama_lengkap": "Super Admin",
+      "alamat":"Dusun Kumbi",
+      "no_hp":"087761292021",
+      "role":"superadmin",
+      "token":"superadmin"
+    }
+  ]
+}
