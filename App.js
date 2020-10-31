@@ -40,7 +40,7 @@ export default function App(props) {
       setState(true);
     })();
   },[]);
-  console.log("lokasi",state)
+  // console.log("lokasi",state)
   return (
     state===true&&
     <NavigationContainer>

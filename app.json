@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nuraksasigmobile",
-    "slug": "nuraksasigmobile",
+    "name": "Nuraksa",
+    "slug": "Nuraksa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,6 +21,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.abi180798.nuraksasigmobile",
+      "config":{
+        "googleMaps":{
+          "apiKey":"AIzaSyAhVNg77hlyE-Zlv2GQTsC9AddTuUEmLv8"
+        }
+      }
     }
   }
 }
