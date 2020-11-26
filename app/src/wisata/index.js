@@ -64,7 +64,7 @@ export default function Wisata(props) {
               <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}>{data && data.nama_wisata}</Text>
               <Text note style={styles.modalText}>{data.data && data.data.alamat_wisata}</Text>
               <Text style={styles.modalText}>{data.data && data.data.deskripsi_wisata}</Text>
-              <Text style={styles.modalText}>Lokasi Wisata: {data && data.latitude},{data && data.longitude}</Text>
+              <Text style={styles.modalText}>Lokasi Wisata: {data.data && data.data.latitude},{data.data && data.data.longitude}</Text>
               <View style={{ flexDirection: "row" }}>
                 <TouchableHighlight
                   style={{ ...styles.openButton, backgroundColor: "#2196F3", flex: 1, marginRight: 20 }}
