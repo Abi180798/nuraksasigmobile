@@ -9,7 +9,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const img = require("../../../../assets/icon.png")
 const carousel = require("../../../../assets/img/carousel.jpg")
 const notfound = require("../../../../assets/img/imgnotfound.png")
-export default function Contents({ props, wisatas, events, weather }) {
+export default function Contents({ props, wisatas, events, weather,wisatasurl,eventsurl }) {
+  console.log(wisatasurl)
   // console.log("taek", weather[0].description)
   const [state, setState] = useState({
     activeIndex: 0
@@ -23,7 +24,7 @@ export default function Contents({ props, wisatas, events, weather }) {
         <Card>
           <CardItem>
             <Left>
-              <Thumbnail source={item.gambar_wisata !== "" ? { uri: `http://tahurawisata.herokuapp.com/wisata/wisatas/photo/${item.gambar_wisata}` } : notfound} />
+              <Thumbnail source={item.gambar_wisata !== "" ? { uri: wisatasurl[index] } : notfound} />
               <Body>
                 <Text>{item.nama_wisata}</Text>
                 <Text note>{item.alamat_wisata}</Text>
@@ -31,7 +32,7 @@ export default function Contents({ props, wisatas, events, weather }) {
             </Left>
           </CardItem>
           <CardItem cardBody>
-            <Image source={item.gambar_wisata !== "" ? { uri: `http://tahurawisata.herokuapp.com/wisata/wisatas/photo/${item.gambar_wisata}` } : notfound} style={{ height: 200, width: null, flex: 1 }} />
+            <Image source={item.gambar_wisata !== "" ? { uri: wisatasurl[index] } : notfound} style={{ height: 200, width: null, flex: 1 }} />
           </CardItem>
           <CardItem>
             <Left>
@@ -56,7 +57,7 @@ export default function Contents({ props, wisatas, events, weather }) {
         <Card>
           <CardItem>
             <Left>
-              <Thumbnail source={item.gambar_event !== "" ? { uri: `https://eventtahura.herokuapp.com/event/events/photo/${item.gambar_event}` } : notfound} />
+              <Thumbnail source={item.gambar_event !== "" ? { uri: eventsurl[index] } : notfound} />
               <Body>
                 <Text>{item.judul_event}</Text>
                 <Text note>{getDateTimeArrayIndo(item.tanggal_event)}</Text>
@@ -64,7 +65,7 @@ export default function Contents({ props, wisatas, events, weather }) {
             </Left>
           </CardItem>
           <CardItem cardBody>
-            <Image source={item.gambar_event !== "" ? { uri: `https://eventtahura.herokuapp.com/event/events/photo/${item.gambar_event}` } : notfound} style={{ height: 200, width: null, flex: 1 }} />
+            <Image source={item.gambar_event !== "" ? { uri: eventsurl[index] } : notfound} style={{ height: 200, width: null, flex: 1 }} />
           </CardItem>
         </Card>
       </View>
