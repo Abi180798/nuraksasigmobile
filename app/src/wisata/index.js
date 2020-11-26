@@ -6,6 +6,7 @@ import Detail from './components/detail'
 import Constants from 'expo-constants'
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Title } from 'native-base';
 import fconfig from '../../../config/fconfig'
+import {dotEnd} from '../../utils/index'
 
 const conf = fconfig.storage()
 
@@ -59,13 +60,19 @@ export default function Wisata(props) {
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <Thumbnail source={data.data && data.data.gambar_wisata !== "" ? { uri: wisatas.url && wisatas.url[data.index] } : image} style={{ height: 100, width: 100 }} />
+              <View>
+                <View style={styles.centeredThings}>
 
-              <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}>{data && data.nama_wisata}</Text>
+              <Thumbnail source={data.data && data.data.gambar_wisata !== "" ? { uri: wisatas.url && wisatas.url[data.index] } : image} style={{ height: 250, width: 250 }} />
+
+              <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}>{data.data && data.data.nama_wisata}</Text>
               <Text note style={styles.modalText}>{data.data && data.data.alamat_wisata}</Text>
-              <Text style={styles.modalText}>{data.data && data.data.deskripsi_wisata}</Text>
+                </View>
+            <ScrollView style={styles.scrollView}>
+              <Text style={styles.modalTextContent}>{data.data && data.data.deskripsi_wisata}</Text>
               <Text style={styles.modalText}>Lokasi Wisata: {data.data && data.data.latitude},{data.data && data.data.longitude}</Text>
-              <View style={{ flexDirection: "row" }}>
+              </ScrollView>
+              <View style={{ flexDirection: "row",marginTop:20 }}>
                 <TouchableHighlight
                   style={{ ...styles.openButton, backgroundColor: "#2196F3", flex: 1, marginRight: 20 }}
                   onPress={() => {
@@ -82,6 +89,7 @@ export default function Wisata(props) {
                 >
                   <Text style={styles.textStyle}>Kembali</Text>
                 </TouchableHighlight>
+              </View>
               </View>
             </View>
           </View>
@@ -105,8 +113,8 @@ export default function Wisata(props) {
                     <Thumbnail source={row.gambar_wisata !== "" ? { uri: wisatas.url && wisatas.url[index] } : image} style={{ height: 100, width: 100 }} />
                   </View>
                   <View style={{ flex: 2, marginLeft: 10 }}>
-                    <Text style={{ fontSize: 18 }}>{row.nama_wisata}</Text>
-                    <Text note>{row.alamat_wisata}</Text>
+                    <Text style={{ fontSize: 18 }}>{dotEnd(row.nama_wisata,0,30,"...")}</Text>
+                    <Text note>{dotEnd(row.alamat_wisata,0,30,"...")}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
@@ -129,6 +137,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 22
+  },
+  centeredThings:{
+    display:"flex",
+    alignItems:"center"
+  },
+  scrollView: {
+    marginHorizontal: -20,
+    paddingRight:20,
+    paddingLeft:10
   },
   modalView: {
     margin: 20,
@@ -159,5 +176,9 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center"
+  },
+  modalTextContent: {
+    marginBottom: 15,
+    textAlign: "justify"
   },
 });

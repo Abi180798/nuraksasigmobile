@@ -5,6 +5,7 @@ import Constants from 'expo-constants'
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Title } from 'native-base';
 import { getDateTimeArrayIndo } from '../../utils/convert';
 import fconfig from '../../../config/fconfig'
+import {dotEnd} from '../../utils/index'
 
 const conf = fconfig.storage()
 
@@ -56,11 +57,16 @@ export default function Event() {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-          <Thumbnail source={data.data&&data.data.gambar_event!==""?{uri:events.url && events.url[data.index]}:image} style={{height:100,width:100}}/>
-            <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}>{data && data.judul_event}</Text>
-            <Text note style={styles.modalText}>{data.data && data.data.deskripsi_event}</Text>
+          <View>
+          <Thumbnail source={data.data&&data.data.gambar_event!==""?{uri:events.url && events.url[data.index]}:image} style={{height:250,width:250}}/>
+            <Text style={{ fontSize: 20, fontWeight: "bold", textAlign: "center" }}>{data.data && data.data.judul_event}</Text>
             <Text style={styles.modalText}>{data.data && getDateTimeArrayIndo(data.data.tanggal_event)}</Text>
-            <View style={{ flexDirection: "row" }}>
+            </View>
+            <ScrollView style={styles.scrollView}>
+
+            <Text note style={styles.modalTextContent}>{data.data && data.data.deskripsi_event}</Text>
+            </ScrollView>
+            <View style={{ flexDirection: "row",marginTop:20 }}>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "#2196F3", flex: 1 }}
                 onPress={() => {
@@ -92,8 +98,8 @@ export default function Event() {
                   <Thumbnail source={row.gambar_event!==""?{uri:events.url && events.url[index]}:image} style={{ height: 100,width:100 }} />
                 </View>
                 <View style={{ flex: 2, marginLeft: 10 }}>
-                  <Text style={{ fontSize: 20 }}>{row.judul_event}</Text>
-                  <Text note>{row.deskripsi_event}</Text>
+                  <Text style={{ fontSize: 20 }}>{dotEnd(row.judul_event,0,30,"...")}</Text>
+                  <Text note>{dotEnd(row.deskripsi_event,0,60,"...")}</Text>
                 </View>
               </View>
             </TouchableOpacity>
@@ -116,6 +122,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 22
+  },
+  centeredThings:{
+    display:"flex",
+    alignItems:"center"
+  },
+  scrollView: {
+    marginHorizontal: -20,
+    paddingRight:20,
+    paddingLeft:10
   },
   modalView: {
     margin: 20,
@@ -146,5 +161,9 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center"
-  }
+  },
+  modalTextContent: {
+    marginBottom: 15,
+    textAlign: "justify"
+  },
 });
